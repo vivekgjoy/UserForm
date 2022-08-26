@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'UserForm';
-  Header = 'Hi Everyone Welcome to Platosys';
 
   constructor(public router:Router)
   {
