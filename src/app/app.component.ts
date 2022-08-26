@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'UserForm';
+  Header = 'Hi Everyone Welcome to Platosys';
+
+  constructor(public router:Router)
+  {
+
+  }
+
+
+  gotouser()
+  {
+    this.router.navigateByUrl('/user')
+  }
+  registerform()
+  {
+    this.router.navigateByUrl('/register-form')
+  }
+  appwelcome()
+  {
+    this.router.navigateByUrl('/welcome')
+  }
 }
