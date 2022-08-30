@@ -27,4 +27,8 @@ export class AppComponent {
   {
     this.router.navigateByUrl('/welcome')
   }
+  reactiveform()
+  {
+    this.router.navigateByUrl('/reactive')
+  }
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms'
 
 @Component({
   selector: 'app-user',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('userForms') uf:NgForm
 
+  setuservalue(){
+    this.uf.setValue({
+      'firstname':'vivek',
+      'password':'G'
+    })
+  }
+  constructor() { 
+
+  }
   ngOnInit(): void {
+    this.setuservalue()
+  }
+  onsummit(data:NgForm){
+    console.log(data)
   }
 
 }

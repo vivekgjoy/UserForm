@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms'
 
 @Component({
   selector: 'app-register-form',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register-form.component.css']
 })
 export class RegisterFormComponent implements OnInit {
+  @ViewChild('userForm') uf:NgForm
 
-  constructor() { }
+  setpatchvalue(){
+    this.uf.form.patchValue({
+      'firstname':'vivek',
+      'lastname':'G',
+     'email':'vivekluck^@gmail.com'
+    })
+  }
+  constructor() {
 
+   }
   ngOnInit(): void {
+   this.setpatchvalue()
+  }
+  onsummit(data:NgForm){
+    console.log(data)
   }
 
 }

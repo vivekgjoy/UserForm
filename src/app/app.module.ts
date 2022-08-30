@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveComponent } from './reactive/reactive.component'
+import {ReactiveFormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     RegisterFormComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ReactiveComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
