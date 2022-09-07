@@ -14,7 +14,6 @@ export class AppComponent {
 
   }
 
-
   gotouser()
   {
     this.router.navigateByUrl('/user')
